@@ -44,12 +44,11 @@ router.get('/:id', async (req, res) => {
 // create new product
 router.post('/', (req, res) => {
   /* req.body should look like this...
-    {
-      product_name: "Basketball",
-      price: 200.00,
-      stock: 3,
-      tagIds: [1, 2, 3, 4]
-    }
+  {"product_name": "Painting",
+  "price": 500.00,
+  "stock": 1,
+  "category_id": 8,
+  "tag_id": 8}
   */
   Product.create(req.body)
     .then((product) => {
