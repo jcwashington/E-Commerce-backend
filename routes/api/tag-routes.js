@@ -51,7 +51,6 @@ router.put('/:id', async (req, res) => {
         id: req.params.id,
       },
     });
-    console.log(tag);
     if (!tag[0]) {
       res.status(404).json({ message : 'No tag found with this id.'});
       return;
